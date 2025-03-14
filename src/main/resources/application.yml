@@ -9,14 +9,14 @@ server:
 spring:
     datasource:
       driverClassName: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://127.0.0.1:3306/studyroom?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+      url: jdbc:mysql://127.0.0.1:3306/studyroom?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
       username: root
-      password: a120461052
+      password: 123456
 
     servlet:
       multipart:
-        max-file-size: 10MB
-        max-request-size: 10MB
+        max-file-size: 20MB
+        max-request-size: 20MB
     resources:
       static-locations: classpath:static/,file:${user.dir}/upload/
 
