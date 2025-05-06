@@ -61,15 +61,9 @@ public class ZuoweiyudingController {
      * 后端列表
      */
     @RequestMapping("/page")
-    public R page(@RequestParam Map<String, Object> params,ZuoweiyudingEntity zuoweiyuding,
-		HttpServletRequest request){
-		String tableName = request.getSession().getAttribute("tableName").toString();
-		if(tableName.equals("xuesheng")) {
-			zuoweiyuding.setXueshenghao((String)request.getSession().getAttribute("username"));
-		}
-        EntityWrapper<ZuoweiyudingEntity> ew = new EntityWrapper<ZuoweiyudingEntity>();
-		PageUtils page = zuoweiyudingService.queryPage(params, MPUtil.sort(MPUtil.between(MPUtil.likeOrEq(ew, zuoweiyuding), params), params));
-
+    public R page(@RequestParam Map<String, Object> params) {
+        // 优化分页逻辑
+        PageUtils page = zixishiService.queryPage(params);
         return R.ok().put("data", page);
     }
     
