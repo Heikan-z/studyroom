@@ -1,4 +1,4 @@
-<p><h1 align="center">264.自习室预约管理系统</h1></p>
+<p><h1 align="center">自习室预约管理系统</h1></p>
 
 
 <p align="center">
